@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: db-migration/v1.0/v1.0-ddl-init.sql
+  - include:
+      file: db-migration/v1.0/v1.0-dml-init.sql
