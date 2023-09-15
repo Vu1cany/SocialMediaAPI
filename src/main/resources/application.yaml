@@ -1,0 +1,20 @@
+server:
+  port: ${server.port}
+  servlet:
+    context-path: /social-media
+spring:
+  datasource:
+    url: ${spring.datasource.url}
+    username: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        show_sql: true
+  liquibase:
+    change-log: db-migration/v1.0/liquibase-master.yaml
+    default-schema: public
+    enabled: true
